@@ -39,12 +39,10 @@
         </div>
     </div>
     <div class="row pt-5">
-        
         @foreach ($user->posts as $post)  
-        
-        <div class="col-4 pb-4">
+        <div class="col-4 pb-4 d-flex justify-content-between">
             <a href="/p/{{ $post->id }}">
-                <img src="/storage/{{ $post->image }}" class="w-100">
+                <img src="{{ $post->image }}" style="height:350px; width:350px" >
             </a>
         </div>
         

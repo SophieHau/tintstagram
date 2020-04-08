@@ -3,8 +3,10 @@
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ProfilesController;
 use App\Mail\NewUserWelcomeMail;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-
+if (App::environment('production')) {
+    URL::forceScheme('https');
+}
 
 Auth::routes();
 
