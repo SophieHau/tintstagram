@@ -6,8 +6,8 @@
     RewriteEngine On
 
     # Handle Authorization Header
-    RewriteCond %{SERVER_PORT} ^443$
-    RewriteRule (.*)
+    RewriteCond %{SERVER_PORT} ^443$ .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
