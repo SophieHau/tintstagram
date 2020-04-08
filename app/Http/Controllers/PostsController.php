@@ -35,6 +35,7 @@ class PostsController extends Controller
         ]);
 
         $imagePath = request('image')->store('images', 's3');
+        
         $remoteImagePath = Storage::disk('s3')->url($imagePath);
 
         auth()->user()->posts()->create([
