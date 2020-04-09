@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="row">
-                    <label for="image" class="col-md-4 col-form-label">Post Image</label>
+                    <label for="image" class="col-md-4 col-form-label">Post Image (2Mb max)</label>
                     <input type="file" class="form-control-file" id="image" name="image">
 
                     @error('image')
