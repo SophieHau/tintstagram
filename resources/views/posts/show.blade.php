@@ -14,7 +14,7 @@
                         <img src="{{ $post->user->profile->profileImage() }}" class="rounded-circle" style="max-width:40px; max-height:40px;" alt="">
                     </div>
                     <div>
-                        <div class="font-weight-bold">
+                        <div class="font-weight-bold d-flex justify-content-between align-items-center">
                             <a href="/profile/{{ $post->user->id }}">
                                 <span class="text-dark">{{ $post->user->username}}</span>
                             </a>
